@@ -1,24 +1,10 @@
 import { motion } from "framer-motion";
+import { useContext } from "react";
+import FeedbackContext from "../../store/feedback-context";
 import FeedbackItem from "./FeedbackItem";
 
 function FeedbackList() {
-  const feedback = [
-    {
-      id: 1,
-      rating: 10,
-      text: "This is feedback item 1",
-    },
-    {
-      id: 2,
-      rating: 9,
-      text: "This is feedback item 2",
-    },
-    {
-      id: 3,
-      rating: 7,
-      text: "This is feedback item 3",
-    },
-  ];
+  const { feedback } = useContext(FeedbackContext);
 
   return (
     <div className="feedback-list">
